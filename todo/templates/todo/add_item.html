@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Add todo:</h1>
+
+    <form method="POST" action="add">
+      {%csrf_token%}
+      <div>
+        <label for="id_item">Name: </label>
+        <input type="text" id="id_name" name="item_name" />
+      </div>
+
+      <div>
+        <label for="id_nome">Done: </label>
+        <input type="checkbox" id="id_done" name="done" />
+      </div>
+
+      <div><button type="submit">Add Item</button></div>
+    </form>
+  </body>
+</html>
